@@ -28,12 +28,7 @@ header h1{
     justify-self: center;
     color: yellow;
 }
-@media (max-width: 800px) {
-    header h1{
-      font-size: 30px;
-      padding: 20px;
-    }
-  }
+
 main{
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
@@ -45,12 +40,7 @@ main{
    display: flex;
    flex-direction: row;
 }
-@media (max-width: 800px) {
-    .main-conteiner-flex {
-      flex-direction: column;
-      
-    }
-  }
+
 .card-pokemon{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -132,5 +122,14 @@ footer a{
 a:hover{
     transform: scale(1.2);
 }
-
+@media (max-width: 800px) {
+    .main-conteiner-flex {
+      flex-direction: column;
+      
+    }
+    header h1{
+        font-size: 30px;
+        padding: 20px;
+      }
+  }
 
