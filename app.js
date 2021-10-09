@@ -1,11 +1,21 @@
 const getPokemon = ()=> {
-    //Obtenermos IDs Aleatorios
-    const aleatorio = (inferior, superior) => {
+      //Obtenermos IDs Aleatorios
+      const aleatorio = (inferior, superior) => {
         let numPosibilidades = superior - inferior;
         let aleatorio = Math.random() * (numPosibilidades + 1);
         aleatorio = Math.floor(aleatorio);
         return inferior + aleatorio;
     }
+    //Cuando encontremos a picachu mostramos el mensaje
+    const getPikachu = (nombre) =>{
+        if (nombre === "pikachu") {
+            const getMensajepikachu = document.querySelector(".main-alert-pikachu-message")
+            const colorMensaje = document.getElementById("message")
+            colorMensaje.style.color = "#80ED99"
+            getMensajepikachu.textContent = `Encontraste a Pikachu!!!`
+        }
+    }
+    //Trabajamos con las cartas
     //CARD 1
     id = aleatorio(1,500)
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -25,6 +35,7 @@ const getPokemon = ()=> {
         <h3>Experiencia: ${pokemon.base_experience} </h3>
 
         <h3>Defensa: ${pokemon.stats[2].base_stat} </h3>`
+        getPikachu(pokemon.name)
     });
 
     //CARD 2
@@ -45,6 +56,7 @@ const getPokemon = ()=> {
         <h3>Experiencia: ${pokemon.base_experience} </h3>
 
         <h3>Defensa: ${pokemon.stats[2].base_stat} </h3>`
+        getPikachu(pokemon.name)
     });
 
     //CARD 3
@@ -64,6 +76,7 @@ const getPokemon = ()=> {
         <h3>Experiencia: ${pokemon.base_experience} </h3>
 
         <h3>Defensa: ${pokemon.stats[2].base_stat} </h3>`
+        getPikachu(pokemon.name)
     });
     
 

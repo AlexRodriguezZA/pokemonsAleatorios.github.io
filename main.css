@@ -36,6 +36,25 @@ main{
     height: 100%;
     width: 100%;
 }
+.main-alert-pikachu{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+
+}
+.main-alert-pikachu-box{
+    grid-column: 2;
+    border: solid yellow 1px;
+    border-radius: 0 30px ;
+}
+.main-alert-pikachu-message{
+    align-self: center;
+    justify-self: center;
+    font-size: 30px;
+    color:rgb(201, 21, 21);
+    text-align: center;
+}
+
 .main-conteiner-flex{
    display: flex;
    flex-direction: row;
