@@ -43,9 +43,12 @@ main{
 
 }
 .main-alert-pikachu-box{
+    margin-top: 10px;
+    margin-bottom: -20px;
     grid-column: 2;
     border: solid yellow 1px;
     border-radius: 0 30px ;
+    
 }
 .main-alert-pikachu-message{
     align-self: center;
